@@ -1,0 +1,23 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ siteUrl('/assets/css/main.css') }}">
+</head>
+<body>
+<header>
+    <nav>
+        <div class="item">
+            <h1 class="logo">Doune</h1>
+        </div>
+        <div class="item"><a href="{{ siteUrl('/') }}">Home</a></div>
+        <div class="item"><a href="{{ urlFor('articles.create') }}">Create article</a></div>
+    </nav>
+</header>
+<div class="container">
+{% block content %}{% endblock %}
+</div>
+<footer>
+    Mathew Hany &copy; 2015
+</footer>
+</body>
+</html>

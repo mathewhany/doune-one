@@ -1,0 +1,15 @@
+{
+    "require": {
+        "slim/slim": "~2.6",
+        "slim/views": "^0.1.3",
+        "twig/twig": "^1.18"
+    },
+    "autoload": {
+        "classmap": [
+            "app/helpers"
+        ],
+        "files": [
+            "app/helpers/functions.php"
+        ]
+    }
+}

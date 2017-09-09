@@ -1,0 +1,16 @@
+{% extends 'app.html.twig' %}
+
+{% block content %}
+    {% for article in articles %}
+        <article>
+            <h2 class="title">
+                <a href="{{ urlFor('articles.show', {"id": article.id}) }}">{{ article.title }}</a>
+                {% include 'articles/controlButtons.html.twig' %}
+            </h2>
+        </article>
+    {% else %}
+        <div class="alert alert-warning">
+            No articles, yet! <a href="{{ urlFor("articles.create") }}">Create one now</a>
+        </div>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'app.html.twig' %}
+
+{% block content %}
+    <article>
+        <h2 class="title">
+            <a href="{{ urlFor("articles.show", {"id": article.id}) }}">
+                {{ article.title }}
+            </a>
+            {% include 'articles/controlButtons.html.twig' %}
+        </h2>
+        <div class="content">{{ article.content|raw }}</div>
+    </article>
+{% endblock %}
